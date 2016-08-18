@@ -2,6 +2,7 @@ module Main where
 
 import Text.HTML.Scalpel
 import Control.Applicative
+import Control.Arrow
 import Data.Function
 import Data.List
 
@@ -13,10 +14,13 @@ openings :: Scraper String [Opening]
 openings = do
     chroots "td" opening
 
+inWords :: ([String] -> [String]) -> String -> String
+inWords f = words >>> f >>> unwords
+
 opening :: Scraper String Opening
 opening = do
     directions <- text "h6"
-    let address = directions & words & delete "kort" & unwords
+    let address = directions & inWords (delete "kort")
     hours <- text "p"
     return (Opening hours address)
 
