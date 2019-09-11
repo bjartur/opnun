@@ -1,3 +1,0 @@
-Opnun eru drög að forriti sem skrapar opnunartíma af vefsíðum fyrirtækja. Sjálfvirkt uppfærðir opnunartímar verða vistaðir í gagnagrunn. Þar verður hægt að fletta upp hvar næsti opni veitingastaður sé eða hvaða skemmtilegu söfn verði opin á sunnudaginn.
-
-Hverja vefsíðu með opnunartíma þarf að skrapa sérstaklega. Gagnagrunn og viðmót má hinsvegar samnýta. Uppistaða forritsins er í app/Main.hs.
